@@ -1,10 +1,11 @@
 import requests
 import argparse
+# URL内のIPアドレス・ポート番号は別途共有いたします。
 
 
 def login_and_process(id, pw, next):
     # ログインに必要な情報
-    URL = "http://3.113.131.37:8000/accounts/login/"
+    URL = "http://xxx.xxx.xxx.xxx:xxxx/accounts/login/"
     ID = str(id)
     PASS = str(pw)
     NEXT = next
@@ -27,7 +28,7 @@ def login_and_process(id, pw, next):
 
 
 def latlon_to_income(id, pw, lat, lon):
-    next = "http://3.113.131.37:8000/highincome_api/latloninput/result?input_lon={}&input_lat={}&input_radius={}".format(
+    next = "http://xxx.xxx.xxx.xxx:xxxx/highincome_api/latloninput/result?input_lon={}&input_lat={}&input_radius={}".format(
         lon, lat, rad)
 
     responce = login_and_process(id, pw, next)
@@ -36,7 +37,7 @@ def latlon_to_income(id, pw, lat, lon):
 
 
 def latlon_to_railline(id, pw, lat, lon):
-    next = "http://3.113.131.37:8000/highincome_api/latloninput_railline/result?input_lon={}&input_lat={}&input_radius={}".format(
+    next = "http://xxx.xxx.xxx.xxx:xxxx/highincome_api/latloninput_railline/result?input_lon={}&input_lat={}&input_radius={}".format(
         lon, lat, rad)
 
     responce = login_and_process(id, pw, next)
